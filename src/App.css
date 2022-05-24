@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,223 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono&family=Fira+Sans&family=Roboto&display=swap");
+
+@media only screen and (min-width: 1700px) {
+  .resume-subject-container {
+    padding-left: 25em;
+    padding-right: 25em;
+  }
+}
+
+@media only screen and (min-width: 1050px) and (max-width: 1700px) {
+  .resume-subject-container {
+    padding-left: 10em;
+    padding-right: 25em;
+  }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1050px) {
+  .resume-subject-container {
+    padding-left: 2em;
+    padding-right: 5em;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .resume-header {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .resume-subject-container {
+    align-self: stretch;
+    padding-left: 1em;
+    padding-right: 2em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+  .resume-header > img {
+    min-width: 75%;
+  }
+}
+
+@media screen {
+  body {
+    margin: 2em;
+    color: #fff;
+    background-color: #04092c;
+
+    /* font-family: 'Raleway', sans-serif; */
+    font-family: "Fira Sans", sans-serif;
+  }
+  .resume-page {
+    border: 3px white solid;
+    /* background-color: #04092c; */
+    aspect-ratio: 210 / 297; /* aspect ratio of a4 paper: https://papersizes.io/a/*/
+    padding: 2em;
+  }
+  .resume-header {
+    border: 2px solid hotpink;
+    justify-content: space-between;
+  }
+  .resume-subject-container {
+    background-color: hotpink;
+  }
+  .resume-header > img {
+    outline: 3px white dashed;
+    outline-offset: 1em;
+  }
+
+  .resume-section header {
+    font-size: 2em;
+  }
+
+  .capabilities {
+    display: flex;
+    flex-flow: row wrap;
+    flex-basis: 20%;
+    row-gap: 0.75em;
+    column-gap: 3em;
+    justify-content: space-around;
+  }
+  .capabilities > li {
+    background-color: hotpink;
+    list-style: none;
+    padding: 0.55em;
+  }
+  .work-history-item {
+    outline: 5px hotpink solid;
+  }
+}
+
+@media only print {
+  body {
+    margin: 0em;
+    font-family: "Roboto", sans-serif;
+    color: black;
+  }
+  .resume-page {
+    padding: 0em;
+    margin: 0em;
+  }
+  .resume-page {
+    margin: 0em;
+    padding: 0em;
+  }
+  .resume-header {
+    /* padding-left: 2.5em; */
+    border: 2px solid black;
+    justify-content: space-around;
+  }
+  .resume-subject-container {
+    padding-left: 1.2em;
+  }
+  .resume-header > img {
+    outline: 3px black dashed;
+    outline-offset: 1em;
+  }
+  .resume-section header {
+    font-size: 1.5em;
+  }
+  .resume-section {
+    page-break-inside: avoid;
+  }
+
+  /* 
+  TODO: You really need to wrap your mind around this a little better:border: 
+  See: https://css-tricks.com/equal-columns-with-flexbox-its-more-complicated-than-you-might-think/
+  */
+  .print-columns {
+    display: flex;
+    flex-flow: row;
+    column-gap: 1.2em;
+  }
+  .print-columns > * {
+    flex-basis: 100%;
+  }
+
+  .capabilities {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .capabilities > li {
+    list-style: disc;
+    padding: 0.55em;
+  }
+
+  .resume-list-section {
+    display: flex;
+    flex-flow: row;
+    column-gap: 0em;
+  }
+}
+
+.resume-header {
+  display: flex;
+}
+
+.resume-subject-container {
+  min-width: 35vmin;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.resume-subject-container > div {
+  min-width: max-content;
+}
+
+.resume-subject {
+  font-size: 2.75em;
+}
+
+.resume-header > img {
+  margin: 2em;
+  /* aspect-ratio: 1; */
+  max-width: 20vmax;
+  max-height: 20vmax;
+  border-radius: 50%;
+}
+
+.resume-section {
+  padding: 1.25em;
+
+  /* border: 2px black solid; */
+}
+
+.resume-section .resume-section header {
+  font-size: 1.4em;
+}
+
+.resume-section .resume-section {
+  margin-top: 0.5em;
+  margin-bottom: 0.75em;
+}
+
+.resume-section.work-history > .resume-section-children {
+  display: flex;
+  flex-flow: column;
+  row-gap: 2em;
+  padding-top: 3em;
+}
+
+.work-history-item {
+  padding: 0.45em;
+  /* transform: perspective(900px) rotateX(17deg) rotateY(-6deg); */
+}
+
+.work-history-item > .employer {
+  font-variant: small-caps;
+  font-size: 1.4em;
+}
+
+.work-history-item > .position {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted white;
 }
