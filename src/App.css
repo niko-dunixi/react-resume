@@ -139,6 +139,9 @@
   .work-history-item {
     outline: 5px hotpink solid;
   }
+  .work-history-item > .position {
+    border-bottom: 3px dotted white;
+  }
 }
 
 @media only print {
@@ -176,7 +179,6 @@
   .resume-section {
     page-break-inside: avoid;
   }
-
   /* 
   TODO: You really need to wrap your mind around this a little better:border: 
   See: https://css-tricks.com/equal-columns-with-flexbox-its-more-complicated-than-you-might-think/
@@ -189,21 +191,21 @@
   .print-columns > * {
     flex-basis: 100%;
   }
-
   .capabilities {
     display: flex;
     flex-flow: column;
   }
-
   .capabilities > li {
     list-style: disc;
     padding: 0.55em;
   }
-
   .resume-list-section {
     display: flex;
     flex-flow: row;
     column-gap: 0em;
+  }
+  .work-history-item > .position {
+    border-bottom: 3px dotted black;
   }
 }
 
@@ -270,5 +272,5 @@
 .work-history-item > .position {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px dotted white;
+  padding-bottom: 2px;
 }
