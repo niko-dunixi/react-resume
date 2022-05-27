@@ -87,6 +87,22 @@
     /* font-family: 'Raleway', sans-serif; */
     font-family: "Fira Sans", sans-serif;
   }
+  .style-controls {
+    /* Set at the top-right */
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    /* actual appearance */
+    background-color: #04092c;
+    border-left: 2px solid hotpink;
+    border-bottom: 2px solid hotpink;
+    outline: 3px white dashed;
+    outline-offset: 1em;
+    padding: 1.25em;
+  }
+  .style-control-link {
+    text-decoration: underline;
+  }
   .resume-page {
     border: 3px white solid;
     /* background-color: #04092c; */
@@ -104,11 +120,9 @@
     outline: 3px white dashed;
     outline-offset: 1em;
   }
-
   .resume-section header {
     font-size: 2em;
   }
-
   .capabilities {
     display: flex;
     flex-flow: row wrap;
@@ -132,6 +146,9 @@
     margin: 0em;
     font-family: "Roboto", sans-serif;
     color: black;
+  }
+  .style-controls {
+    display: none;
   }
   .resume-page {
     padding: 0em;

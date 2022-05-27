@@ -7,6 +7,7 @@ import WorkExperience, {
 } from "./WorkExperience";
 import Section from "./Section";
 import selfie from "./images/profile.jpg";
+import StyleControls from "./StyleControls";
 
 const workexp: Array<WorkExperienceProps> = [
   {
@@ -143,82 +144,85 @@ function App() {
   const qualificationListItems = qualifications.map((item) => <li>{item}</li>);
 
   return (
-    <div className="resume-page">
-      <header className="resume-header">
-        <div className="resume-subject-container">
-          <div className="resume-subject">Paul N Cook Baker</div>
-          <div>paul.nelson.baker@gmail.com - 801-613-0864</div>
-          <div>Senior Software Engineer</div>
-          <div>Computer Scientist</div>
+    <>
+      <StyleControls />
+      <div className="resume-page">
+        <header className="resume-header">
+          <div className="resume-subject-container">
+            <div className="resume-subject">Paul N Cook Baker</div>
+            <div>paul.nelson.baker@gmail.com - 801-613-0864</div>
+            <div>Senior Software Engineer</div>
+            <div>Computer Scientist</div>
+          </div>
+          <img src={selfie}></img>
+        </header>
+        <div className="print-columns">
+          <Section title="Profile">
+            <p>
+              Experienced Senior Software Engineer who achitects robust
+              microservice architectures with an emphasis on quality,
+              cost-effectiveness and availability. Has a passion for the "you
+              build it, you own it" philosophy and believes all developers should
+              incorporate DevOps and SRE based practices into their engineering
+              pipelines.
+            </p>
+            <p>
+              In his spare time Paul enjoys aerial dance fitness, kettlebell
+              swings, and recently learned you can make as much Kombucha at home
+              as you want and no one can legally stop you.
+            </p>
+          </Section>
+          <Section title={"Qualifications"}>
+            <ul className="qualifications capabilities">
+              {qualificationListItems}
+            </ul>
+          </Section>
         </div>
-        <img src={selfie}></img>
-      </header>
-      <div className="print-columns">
-        <Section title="Profile">
-          <p>
-            Experienced Senior Software Engineer who achitects robust
-            microservice architectures with an emphasis on quality,
-            cost-effectiveness and availability. Has a passion for the "you
-            build it, you own it" philosophy and believes all developers should
-            incorporate DevOps and SRE based practices into their engineering
-            pipelines.
-          </p>
-          <p>
-            In his spare time Paul enjoys aerial dance fitness, kettlebell
-            swings, and recently learned you can make as much Kombucha at home
-            as you want and no one can legally stop you.
-          </p>
+        <Section title={"Skills and Experience"}>
+          <div className="print-columns">
+            <Section title={"Application Development"}>
+              <ul className="capabilities">
+                <li>Java SpringBoot</li>
+                <li>.NET/C#</li>
+                <li>GoLang</li>
+                <li>React with Typescript</li>
+                <li>Python Flask</li>
+              </ul>
+            </Section>
+            <Section title="Data Management">
+              <ul className="capabilities">
+                <li>MySQL</li>
+                <li>Postgres</li>
+                <li>Amazon Aurora/CloudSQL</li>
+                <li>DynamoDB</li>
+              </ul>
+            </Section>
+            <Section title={"CI/CD"}>
+              <ul className="capabilities">
+                <li>Git</li>
+                <li>Linux/Bash</li>
+                <li>Docker</li>
+                <li>Apache Maven</li>
+                <li>Helm</li>
+                <li>Kustomize</li>
+                <li>Terraform</li>
+                <li>AWS CloudFormation</li>
+              </ul>
+            </Section>
+            <Section title={"Platforms"}>
+              <ul className="capabilities">
+                <li>GCP</li>
+                <li>AWS</li>
+                <li>Kubernetes</li>
+              </ul>
+            </Section>
+          </div>
         </Section>
-        <Section title={"Qualifications"}>
-          <ul className="qualifications capabilities">
-            {qualificationListItems}
-          </ul>
+        <Section title={"Work History"} className="work-history">
+          {experience}
         </Section>
       </div>
-      <Section title={"Skills and Experience"}>
-        <div className="print-columns">
-          <Section title={"Application Development"}>
-            <ul className="capabilities">
-              <li>Java SpringBoot</li>
-              <li>.NET/C#</li>
-              <li>GoLang</li>
-              <li>React with Typescript</li>
-              <li>Python Flask</li>
-            </ul>
-          </Section>
-          <Section title="Data Management">
-            <ul className="capabilities">
-              <li>MySQL</li>
-              <li>Postgres</li>
-              <li>Amazon Aurora/CloudSQL</li>
-              <li>DynamoDB</li>
-            </ul>
-          </Section>
-          <Section title={"CI/CD"}>
-            <ul className="capabilities">
-              <li>Git</li>
-              <li>Linux/Bash</li>
-              <li>Docker</li>
-              <li>Apache Maven</li>
-              <li>Helm</li>
-              <li>Kustomize</li>
-              <li>Terraform</li>
-              <li>AWS CloudFormation</li>
-            </ul>
-          </Section>
-          <Section title={"Platforms"}>
-            <ul className="capabilities">
-              <li>GCP</li>
-              <li>AWS</li>
-              <li>Kubernetes</li>
-            </ul>
-          </Section>
-        </div>
-      </Section>
-      <Section title={"Work History"} className="work-history">
-        {experience}
-      </Section>
-    </div>
+    </>
   );
 }
 
