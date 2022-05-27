@@ -8,6 +8,7 @@ import WorkExperience, {
 import Section from "./Section";
 import selfie from "./images/profile.jpg";
 import StyleControls from "./StyleControls";
+import stringHash from "string-hash";
 
 const workexp: Array<WorkExperienceProps> = [
   {
@@ -140,8 +141,16 @@ const qualifications = [
 ];
 
 function App() {
-  const experience = workexp.map((item) => WorkExperience(item));
-  const qualificationListItems = qualifications.map((item) => <li>{item}</li>);
+  const experience = workexp.map((item) => {
+    return <WorkExperience
+      key={stringHash(item.employer)}
+      employer={item.employer}
+      positions={item.positions}
+      highlights={item.highlights}
+      summary={item.summary}
+    />
+  });
+  const qualificationListItems = qualifications.map((item) => <li key={stringHash(item)}>{item}</li>);
 
   return (
     <>

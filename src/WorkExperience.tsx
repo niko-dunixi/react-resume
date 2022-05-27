@@ -1,4 +1,5 @@
 import React from 'react';
+import stringHash from "string-hash";
 
 export type Position = {
     title: string,
@@ -38,8 +39,15 @@ export const WorkExperiencePosition = (position: Position) => {
 };
 
 export const WorkExperience = (props: WorkExperienceProps) => {
-    const positions = props.positions.map((position) => WorkExperiencePosition(position));
-    const highlights = props.highlights.map((item) => <li>{item}</li>)
+    const positions = props.positions.map((position) => {
+        return <WorkExperiencePosition
+            key={stringHash(position.title)}
+            title={position.title}
+            start={position.start}
+            end={position.end}
+        />
+    });
+    const highlights = props.highlights.map((item) => <li key={stringHash(item)}>{item}</li>)
 
     return (
         <div className='work-history-item'>
