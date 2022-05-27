@@ -104,7 +104,7 @@
     text-decoration: underline;
   }
   .resume-page {
-    border: 3px white solid;
+    border: 3px white dashed;
     /* background-color: #04092c; */
     aspect-ratio: 210 / 297; /* aspect ratio of a4 paper: https://papersizes.io/a/*/
     padding: 2em;
