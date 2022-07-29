@@ -70,7 +70,7 @@ const workexp: Array<WorkExperienceProps> = [
       },
     ],
     highlights: [
-      "Migrated legacy JSP in Tomcat applications to SprintBoot in Docker",
+      "Migrated legacy JSP in Tomcat applications to SpringBoot in Docker",
       "Introduced GoLang for CI/CD and Devloper Tooling",
     ],
     summary: `Develop new student and employee facing Java (SpringBoot) APIs.
