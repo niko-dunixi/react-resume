@@ -161,7 +161,7 @@ function App() {
             <div className="resume-subject">Paul N Cook Baker</div>
             <div>paul.nelson.baker@gmail.com - 801-613-0864</div>
             <div>Senior Software Engineer</div>
-            <div>Computer Scientist</div>
+            <div>Computer Scientist, Gopher, Rustacean, but never enough Caffeination</div>
           </div>
           <img src={selfie}></img>
         </header>
