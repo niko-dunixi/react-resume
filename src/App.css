@@ -81,7 +81,8 @@
     padding-bottom: 3em;
   }
   .resume-header > img {
-    min-width: 75%;
+    min-width: 45vw;
+    min-height: 45vw;
   }
 }
 
