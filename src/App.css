@@ -1,45 +1,7 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-/* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap'); */
+/* Main definitions */
 @import url("https://fonts.googleapis.com/css2?family=Fira+Mono&family=Fira+Sans&family=Roboto&display=swap");
 
+/* Handling header responsiveness as dimensions change */
 @media only screen and (min-width: 1600px) {
   .resume-subject-container {
     padding-left: 20em;
@@ -68,6 +30,7 @@
   }
 }
 
+/* Custom handling for padding on big and small sizes */
 @media only screen and (max-width: 775px) {
   .resume-header {
     flex-direction: column-reverse;
@@ -81,17 +44,40 @@
     padding-bottom: 3em;
   }
   .resume-header > img {
-    min-width: 45vw;
-    min-height: 45vw;
+    min-width: 65vw;
+    min-height: 65vw;
   }
 }
 
-@media screen {
+@media screen and (min-width: 775px) {
   body {
     margin: 2em;
+  }
+  .resume-page {
+    padding: 2em;
+  }
+  .style-controls {
+    padding: 1.25em;
+  }
+}
+
+@media screen and (max-width: 775px) {
+  body {
+    margin: 0.5em;
+  }
+  .resume-page {
+    padding: 0.5em;
+  }
+  .style-controls {
+    display: none;
+  }
+}
+
+/* Primary screen definitions */
+@media screen {
+  body {
     color: #fff;
     background-color: #04092c;
-
     /* font-family: 'Raleway', sans-serif; */
     font-family: "Fira Sans", sans-serif;
   }
@@ -106,7 +92,6 @@
     border-bottom: 2px solid hotpink;
     outline: 3px white dashed;
     outline-offset: 1em;
-    padding: 1.25em;
   }
   .style-control-link {
     text-decoration: underline;
@@ -115,7 +100,6 @@
     border: 3px white dashed;
     /* background-color: #04092c; */
     aspect-ratio: 210 / 297; /* aspect ratio of a4 paper: https://papersizes.io/a/*/
-    padding: 2em;
   }
   .resume-header {
     border: 2px solid hotpink;
@@ -152,6 +136,7 @@
   }
 }
 
+/* Simplicitic view for printing */
 @media only print {
   body {
     margin: 0em;
