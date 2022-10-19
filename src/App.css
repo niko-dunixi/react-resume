@@ -20,6 +20,10 @@
   .resume-subject-container {
     padding-left: 5em;
     padding-right: 10em;
+    width: 45vw;
+  }
+  .resume-contact-container {
+    flex-direction: column-reverse;
   }
 }
 
@@ -27,6 +31,10 @@
   .resume-subject-container {
     padding-left: 2em;
     padding-right: 5em;
+    width: 45vw;
+  }
+  .resume-contact-container {
+    flex-direction: column-reverse;
   }
 }
 
