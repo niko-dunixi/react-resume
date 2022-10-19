@@ -27,7 +27,7 @@
   }
 }
 
-@media only screen and (min-width: 750px) and (max-width: 1050px) {
+@media only screen and (min-width: 775px) and (max-width: 1050px) {
   .resume-subject-container {
     padding-left: 2em;
     padding-right: 5em;
