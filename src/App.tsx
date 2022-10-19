@@ -159,9 +159,9 @@ function App() {
       <div className="resume-page">
         <header className="resume-header">
           <div className="resume-subject-container">
-            <div className="resume-subject">Paul N Cook Baker</div>
+            <div className="resume-subject">Niko Dunixi</div>
             <div className="resume-contact-container">
-              <a href="mailto:paul.nelson.baker@gmail.com">
+              <a href="mailto:paul.nelson.baker+nikodunixi@gmail.com">
                 paul.nelson.baker@gmail.com
               </a>
               <a href="tel:801-613-0864">801-613-0864</a>
@@ -186,7 +186,7 @@ function App() {
               pipelines.
             </p>
             <p>
-              In his spare time Paul enjoys aerial dance fitness, kettlebell
+              In his spare time Niko enjoys aerial dance fitness, kettlebell
               swings, and recently learned you can make as much Kombucha at home
               as you want and no one can legally stop you.
             </p>
