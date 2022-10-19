@@ -255,6 +255,11 @@
   border-radius: 50%;
 }
 
+.resume-socials {
+  display: flex;
+  font-size: 2em;
+}
+
 .resume-section {
   padding: 1.25em;
 

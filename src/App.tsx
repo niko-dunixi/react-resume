@@ -9,6 +9,7 @@ import Section from "./Section";
 import selfie from "./images/profile.jpg";
 import StyleControls from "./StyleControls";
 import stringHash from "string-hash";
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 
 const workexp: Array<WorkExperienceProps> = [
   {
@@ -167,6 +168,10 @@ function App() {
             </div>
             <div>Senior Software Engineer</div>
             <div>Computer Scientist</div>
+            <div className="resume-socials">
+              <a href="https://github.com/niko-dunixi" target="_blank"><AiFillGithub /></a>
+              <a href="https://www.linkedin.com/in/niko-dunixi" target="_blank"><AiFillLinkedin /></a>
+            </div>
           </div>
           <img className="resume-subject-selfie" src={selfie}></img>
         </header>
