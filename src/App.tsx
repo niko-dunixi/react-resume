@@ -161,7 +161,7 @@ function App() {
           <div className="resume-subject-container">
             <div className="resume-subject">Paul N Cook Baker</div>
             <div className="resume-contact-container">
-              <a href="mailto:paul.nelson.bakergmail.com">
+              <a href="mailto:paul.nelson.baker@gmail.com">
                 paul.nelson.baker@gmail.com
               </a>
               <a href="tel:801-613-0864">801-613-0864</a>
