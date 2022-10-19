@@ -43,7 +43,7 @@
     padding-top: 3em;
     padding-bottom: 3em;
   }
-  .resume-header > img {
+  .resume-subject-selfie {
     min-width: 65vw;
     min-height: 65vw;
   }
@@ -71,6 +71,9 @@
   .style-controls {
     display: none;
   }
+  .resume-contact-container {
+    flex-direction: column-reverse;
+  }
 }
 
 /* Primary screen definitions */
@@ -80,6 +83,12 @@
     background-color: #04092c;
     /* font-family: 'Raleway', sans-serif; */
     font-family: "Fira Sans", sans-serif;
+  }
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: #fff;
   }
   .style-controls {
     /* Set at the top-right */
@@ -108,7 +117,11 @@
   .resume-subject-container {
     background-color: hotpink;
   }
-  .resume-header > img {
+  .resume-contact-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .resume-subject-selfie {
     outline: 3px white dashed;
     outline-offset: 1em;
   }
@@ -162,7 +175,7 @@
   .resume-subject-container {
     padding-left: 1.2em;
   }
-  .resume-header > img {
+  .resume-subject-selfie {
     outline: 3px black dashed;
     outline-offset: 1em;
   }
@@ -222,7 +235,7 @@
   font-size: 2.75em;
 }
 
-.resume-header > img {
+.resume-subject-selfie {
   margin: 2em;
   /* aspect-ratio: 1; */
   max-width: 20vmax;

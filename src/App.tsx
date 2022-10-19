@@ -159,11 +159,16 @@ function App() {
         <header className="resume-header">
           <div className="resume-subject-container">
             <div className="resume-subject">Paul N Cook Baker</div>
-            <div>paul.nelson.baker@gmail.com - 801-613-0864</div>
+            <div className="resume-contact-container">
+              <a href="mailto:paul.nelson.bakergmail.com">
+                paul.nelson.baker@gmail.com
+              </a>
+              <a href="tel:801-613-0864">801-613-0864</a>
+            </div>
             <div>Senior Software Engineer</div>
             <div>Computer Scientist</div>
           </div>
-          <img src={selfie}></img>
+          <img className="resume-subject-selfie" src={selfie}></img>
         </header>
         <div className="print-columns">
           <Section title="Profile">
