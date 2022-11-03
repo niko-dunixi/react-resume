@@ -1,5 +1,4 @@
-import React from "react";
-// import logo from './logo.svg';
+import React, { useEffect } from "react";
 import "./App.css";
 import WorkExperience, {
   WorkExperiencePosition,
@@ -142,6 +141,13 @@ const qualifications = [
 ];
 
 function App() {
+  const now = new Date();
+  useEffect(() => {
+    const month = now.getMonth() + 1;
+    const year = now.getFullYear();
+    document.title = `Resume - Niko Dunixi - ${month}-${year}`;
+  }, [now]);
+
   const experience = workexp.map((item) => {
     return <WorkExperience
       key={stringHash(item.employer)}
