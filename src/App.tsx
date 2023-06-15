@@ -12,11 +12,23 @@ import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 
 const workexp: Array<WorkExperienceProps> = [
   {
+    employer: "WorldWinner/GameTaco",
+    positions: [
+      {
+        title: "Senior Software Engineer",
+        start: new Date(2022, 12),
+      },
+    ],
+    highlights: [],
+    summary: `Rebuilding the legacy Perl/Java platform as a white-label Python product, one LOC at a time.`,
+  },
+  {
     employer: "American Family Insurance",
     positions: [
       {
         title: "Senior Software Engineer",
         start: new Date(2021, 3),
+        end: new Date(2022, 12),
       },
     ],
     highlights: [
