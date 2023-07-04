@@ -4,6 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const url = new URL(window.location.href);
+if (url.host.endsWith("paulfreaknbaker.com")) {
+  url.host = url.host.replaceAll("paulfreaknbaker.com", "nikodunixi.com");
+  window.location.href = url.toString();
+}
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
