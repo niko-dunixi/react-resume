@@ -19,8 +19,20 @@ const workexp: Array<WorkExperienceProps> = [
         start: new Date(2022, 12),
       },
     ],
-    highlights: [],
-    summary: `Rebuilding the legacy Perl/Java platform as a white-label Python product, one LOC at a time.`,
+    highlights: [
+      "Improved reliability of legacy services during major production outage",
+      "Standardized Java library creation with Maven",
+      "Spearheaded developing a sophisticated shim, enabling the delivery of a key feature while bypassing cumbersome legacy infrastructure",
+      "Migrated legacy infrastructure to modern web standards",
+    ],
+    summary: `Took ownership of legacy Java platform and developer in-house
+              build-tools written in GoLang. Rebuilt the UX in modern React/Typescript
+              with integration into the Python Django backend for internationalization.
+
+              Spearheaded the architecture of an AWS Lambda based event system to handle
+              a subset of user workflow when it became impossible to introduce features
+              into the legacy system.
+    `,
   },
   {
     employer: "American Family Insurance",
@@ -179,8 +191,8 @@ function App() {
           <div className="resume-subject-container">
             <div className="resume-subject">Niko Dunixi</div>
             <div className="resume-contact-container">
-              <a href="mailto:paul.nelson.baker+nikodunixi@gmail.com">
-                paul.nelson.baker@gmail.com
+              <a href="mailto:nikodunixi@gmail.com">
+                nikodunixi@gmail.com
               </a>
               <a href="tel:801-613-0864">801-613-0864</a>
             </div>
